@@ -30,6 +30,7 @@ class HotelResource extends Resource
                     ->image()
                     ->required(),
                 Forms\Components\TextInput::make('kota')
+                    ->label('kota/kabupaten')
                     ->required()
                     ->maxLength(255),
                 Forms\Components\TextInput::make('provinsi')

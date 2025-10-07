@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('koleksi_posts', function (Blueprint $table) {
+        Schema::create('mains', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->string('image');
-            $table->longText('description');
+            $table->string('category');
+            $table->longText('description')->nulllable();
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('koleksi_posts');
+        Schema::dropIfExists('mains');
     }
 };

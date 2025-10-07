@@ -9,5 +9,11 @@ class Hotel extends Model
 {
     use HasFactory;
 
-    protected $guarded = [];
+    protected $guarded=[];
+
+    public function detail()
+    {
+        return $this->hasOne(DetailHotel::class, 'hotel_id','id');
+
+    }
 }

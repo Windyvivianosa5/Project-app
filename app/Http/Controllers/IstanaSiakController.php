@@ -2,18 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Wisata;
-use App\Models\TodoPost;
-use App\Models\KoleksiPost;
+use App\Models\Main;
 use Illuminate\Http\Request;
 
 class IstanaSiakController extends Controller
 {
- public function index(){
-    $todoPosts = TodoPost::all();
-    $koleksiPosts = KoleksiPost::all();
-    $wisatas = Wisata::all();
+public function index()
+    {
+        // Ambil semua data dari tabel main
+        $mains = Main::all();
 
-    return view('index', compact('todoPosts','koleksiPosts','wisatas'));
- }
+        // Pisahkan data berdasarkan kategori
+        $todoPosts = Main::where('category', 'todo_post')->get();
+        $koleksiPosts = Main::where('category', 'koleksi_post')->get();
+        $wisatas = Main::where('category', 'wisata')->get();
+
+        return view('index', compact('todoPosts', 'koleksiPosts', 'wisatas', 'mains'));
+    }
 }

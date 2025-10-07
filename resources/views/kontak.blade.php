@@ -1,71 +1,158 @@
 @component('layout')
-    @include('navbar')
-        <h1 class="flex justify-center text-2xl mb-6 mt-5">Wisata dan Liburan ke Riau</h1>
-        <section class="max-w-5xl m-auto">
-            <div class="relative">
-                <img src="assets/img/istana.jpg" alt="">
+@include('navbar')
+
+<main class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Hero Section -->
+    <section class="mb-16">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-3">
+                Wisata dan Liburan ke Riau
+            </h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+                Dapatkan informasi lengkap tentang Istana Siak Sri Indrapura dan destinasi wisata lainnya
+            </p>
+            <div class="w-20 h-0.5 bg-gray-300 mx-auto mt-4"></div>
+        </div>
+
+        <!-- Hero Image -->
+        <div class="relative overflow-hidden rounded-lg shadow-lg group">
+            <img src="assets/img/istana.jpg" alt="Istana Siak Sri Indrapura" class="w-full h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+            <div class="absolute bottom-6 left-6 text-white">
+                <h2 class="text-2xl font-semibold mb-1">Istana Siak Sri Indrapura</h2>
+                <p class="text-sm opacity-90">Warisan Budaya Melayu</p>
             </div>
-            <section class="mb-12 bg-white py-16">
-                <div class="container mx-auto px-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                        <!-- Contact Information -->
-                        <div class="space-y-8">
-                            <!-- Phone -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0">
-                                    <i class="ph ph-phone text-green-600 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm text-gray-500 mb-1">Requesting A Call:</h4>
-                                    <p class="text-lg font-semibold text-gray-900">(629) 555-0129</p>
-                                </div>
-                            </div>
+        </div>
+    </section>
 
-                            <!-- Email -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0">
-                                    <i class="ph ph-envelope text-green-600 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm text-gray-500 mb-1">E-mail</h4>
-                                    <p class="text-lg font-semibold text-gray-900">plusemut@example.com</p>
-                                </div>
-                            </div>
+    <!-- Contact Section -->
+    <section class="mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Contact Information -->
+            <div>
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Informasi Kontak</h3>
+                    <p class="text-gray-600">Hubungi kami untuk informasi lebih lanjut tentang kunjungan wisata</p>
+                </div>
 
-                            <!-- Location -->
-                            <div class="flex items-start space-x-4">
-                                <div class="flex-shrink-0">
-                                    <i class="ph ph-map-pin text-green-600 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-sm text-gray-500 mb-1">Location</h4>
-                                <p class="text-lg font-semibold text-gray-900">Jl. Limbungan, Kel. Limbungan</p>
+                <div class="space-y-6">
+                    <!-- Phone -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-200">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <i class="ph ph-phone text-gray-700 text-2xl"></i>
                             </div>
-                        </div>
-
-                        <!-- Hours -->
-                        <div class="flex items-start space-x-4">
-                            <div class="flex-shrink-0">
-                                <i class="ph ph-clock text-green-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-sm text-gray-500 mb-1">Setiap Hari</h4>
-                                <p class="text-lg font-semibold text-gray-900">08.00 - 18.00 WIB</p>
+                            <div class="flex-1">
+                                <h4 class="text-sm text-gray-500 mb-1">Requesting A Call:</h4>
+                                <p class="text-lg font-semibold text-gray-800">(629) 555-0129</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Map -->
-                    <div class="bg-gray-300 rounded-lg h-80 flex items-center justify-center">
-                        <div class="text-center">
-                            <i class="ph ph-map-trifold text-gray-500 text-6xl mb-4"></i>
-                            <p class="text-gray-600">Map akan ditampilkan di sini</p>
-                            <p class="text-sm text-gray-500 mt-2">Google Maps atau peta interaktif lainnya</p>
+                    <!-- Email -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-200">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <i class="ph ph-envelope text-gray-700 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm text-gray-500 mb-1">E-mail</h4>
+                                <p class="text-lg font-semibold text-gray-800">istanaSiak@example.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-200">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <i class="ph ph-map-pin text-gray-700 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm text-gray-500 mb-1">Location</h4>
+                                <p class="text-base font-semibold text-gray-800">Sri Indrapura, Kp. Dalam, Kec. Siak, Kabupaten Siak, Riau 28773</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow duration-200">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center">
+                                <i class="ph ph-clock text-gray-700 text-2xl"></i>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="text-sm text-gray-500 mb-1">Setiap Hari</h4>
+                                <p class="text-lg font-semibold text-gray-800">07.00 - 17.00 WIB</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        </section>
-    @include('footer')
+
+            <!-- Map -->
+            <div>
+                <div class="mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Lokasi Kami</h3>
+                    <p class="text-gray-600">Temukan kami di peta untuk kemudahan kunjungan Anda</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden">
+                    <div id="map" class="w-full h-[480px]">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3282.972088210432!2d102.04641157395874!3d0.7948122991974714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d4273f88da76f1%3A0xce5a6b2edf647c58!2sIstana%20Siak%20Sri%20Indrapura!5e1!3m2!1sid!2sid!4v1759120444287!5m2!1sid!2sid"
+                            width="100%"
+                            height="480"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="mt-4 bg-blue-50 border border-blue-100 rounded-lg p-4">
+                    <div class="flex items-start gap-3">
+                        <i class="ph ph-info text-blue-600 text-xl mt-0.5"></i>
+                        <p class="text-sm text-gray-700">
+                            Klik pada peta untuk membuka di Google Maps dan mendapatkan petunjuk arah
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section class="bg-gray-50 rounded-lg p-8 border border-gray-100">
+        <div class="text-center mb-8">
+            <h3 class="text-2xl font-bold text-gray-800 mb-3">Informasi Kunjungan</h3>
+            <p class="text-gray-600">Hal-hal yang perlu Anda ketahui sebelum berkunjung</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
+                <div class="text-3xl mb-3">🎫</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Tiket Masuk</h4>
+                <p class="text-sm text-gray-600">Informasi harga tiket dapat ditanyakan langsung</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
+                <div class="text-3xl mb-3">📸</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Foto & Video</h4>
+                <p class="text-sm text-gray-600">Diperbolehkan untuk keperluan dokumentasi pribadi</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 text-center">
+                <div class="text-3xl mb-3">👕</div>
+                <h4 class="font-semibold text-gray-800 mb-2">Pakaian</h4>
+                <p class="text-sm text-gray-600">Gunakan pakaian sopan dan nyaman</p>
+            </div>
+        </div>
+    </section>
+
+
+</main>
+
+@include('footer')
 @endcomponent
